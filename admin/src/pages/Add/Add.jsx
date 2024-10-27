@@ -1,11 +1,10 @@
 import "./Add.css";
 import { assets } from "../../assets/assets";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Add = () => { 
-  const url = "http://localhost:4000";
+const Add = ( { url }) => { 
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name:"",
@@ -45,9 +44,6 @@ const Add = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   return (
     <div className="add">
